@@ -18,14 +18,15 @@ public class CommonMethods {
 	}
 
 	public static void printArr(int[] arr) {
-		StringBuffer bs = new StringBuffer(arr.length * 2);
+		StringBuffer bs = new StringBuffer();
 		for (int i = 0; i < arr.length; i++) {
-			bs.append(Character.forDigit(arr[i], 10));
+			bs.append(arr[i]);
 			bs.append(" ");
 		}
 		System.out.println(bs);
 
 	}
+
 	static void inArraySwap(int[] arr, int i, int j) {
 		int temp = arr[i];
 		arr[i] = arr[j];
