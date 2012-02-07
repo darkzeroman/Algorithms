@@ -13,8 +13,8 @@ public class InsertionSort {
 		insertionSort(unsortedArr);
 		insert(sortedArr, 6);
 		
-		printArr(unsortedArr);
-		printArr(sortedArr);
+		CommonMethods.printArr(unsortedArr);
+		CommonMethods.printArr(sortedArr);
 		
 	}
 
@@ -39,13 +39,5 @@ public class InsertionSort {
 		// printArr(arr);
 	}
 
-	public static void printArr(int[] arr) {
-		StringBuffer bs = new StringBuffer(arr.length * 2);
-		for (int i = 0; i < arr.length; i++) {
-			bs.append(Character.forDigit(arr[i], 10));
-			bs.append(" ");
-		}
-		System.out.println(bs);
 
-	}
 }
