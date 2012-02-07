@@ -15,42 +15,50 @@ public class BinarySearch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] sortedArr = new int[] { 1, 2, 3, 4, 5, 7, 8, 9, 10 };
-		int loc = search(sortedArr, 8);
-		System.out.println(binarySearchIterative(sortedArr, 11));
+		recSearch(sortedArr, 8);
+		iterSearch(sortedArr, 8);
 	}
 
-	public static int search(int[] arr, int num) {
-		return binarySearchIndex(arr, num, 0, arr.length - 1);
+	public static void recSearch(int[] arr, int num) {
+		int loc = recBinSearchIndex(arr, num, 0, arr.length - 1);
+		boolean found = recBinSearch(arr, num, 0, arr.length - 1);
+		System.out
+				.println("Recursive Search: Found?: " + found + " at: " + loc);
 	}
 
-	public static int binarySearchIndex(int[] arr, int num, int left, int right) {
+	public static void iterSearch(int[] arr, int num) {
+		boolean found = iterBinSearch(arr, num);
+		System.out.println("Iterative Search: Found?: " + found);
+
+	}
+
+	public static int recBinSearchIndex(int[] arr, int num, int left, int right) {
 		if (left <= right) {
 			int mid = left + (right - left) / 2;
 			if (arr[mid] == num)
 				return mid;
 			else if (arr[mid] > num)
-				return binarySearchIndex(arr, num, left, mid - 1);
+				return recBinSearchIndex(arr, num, left, mid - 1);
 			else
-				return binarySearchIndex(arr, num, mid + 1, right);
+				return recBinSearchIndex(arr, num, mid + 1, right);
 		} else
 			return -1;
 	}
 
-	public static boolean binarySearchBoolean(int[] arr, int num, int left,
-			int right) {
+	public static boolean recBinSearch(int[] arr, int num, int left, int right) {
 		if (left <= right) {
 			int mid = left + (right - left) / 2;
 			if (arr[mid] == num)
 				return true;
 			else if (arr[mid] > num)
-				return binarySearchBoolean(arr, num, left, mid - 1);
+				return recBinSearch(arr, num, left, mid - 1);
 			else
-				return binarySearchBoolean(arr, num, mid + 1, right);
+				return recBinSearch(arr, num, mid + 1, right);
 		} else
 			return false;
 	}
 
-	public static boolean binarySearchIterative(int[] arr, int num) {
+	public static boolean iterBinSearch(int[] arr, int num) {
 		int left = 0;
 		int right = arr.length - 1;
 		int mid;
