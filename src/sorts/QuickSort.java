@@ -19,8 +19,8 @@ public class QuickSort {
 		sort(unsortedArr);
 		sort(sortedArr);
 		// partition(unsortedArr, 0, unsortedArr.length-1);
-		CommonMethods.printArr(unsortedArr);
-		CommonMethods.printArr(sortedArr);
+		ArrMethods.printArr(unsortedArr);
+		ArrMethods.printArr(sortedArr);
 
 	}
 
@@ -40,16 +40,16 @@ public class QuickSort {
 	static int partition(int[] arr, int left, int right) {
 
 		int pivot = left + random.nextInt(right - left);
-		CommonMethods.inArraySwap(arr, pivot, right);
+		ArrMethods.swapInArr(arr, pivot, right);
 		int store = left;
 
 		for (int i = left; i < right; i++) {
 			if (arr[i] <= arr[right]) {
-				CommonMethods.inArraySwap(arr, i, store);
+				ArrMethods.swapInArr(arr, i, store);
 				store++;
 			}
 		}
-		CommonMethods.inArraySwap(arr, store, right);
+		ArrMethods.swapInArr(arr, store, right);
 
 		return store;
 

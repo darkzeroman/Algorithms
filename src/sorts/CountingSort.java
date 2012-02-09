@@ -16,7 +16,7 @@ public class CountingSort {
 		// TODO Auto-generated method stub
 		int[] unsortedArr = new int[] { 1, 2, 3, 4, 2, 3, 4, 1, 3 };
 		countingSort(unsortedArr, 5);
-		CommonMethods.printArr(unsortedArr);
+		ArrMethods.printArr(unsortedArr);
 	}
 
 	public static void countingSort(int[] arr, int range) {

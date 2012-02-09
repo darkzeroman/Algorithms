@@ -16,7 +16,7 @@ public class SelectionSort {
 		// TODO Auto-generated method stub
 		int[] unsortedArr = new int[] { 3, 5, 1, 9, 4, 8, 6 };
 		sort(unsortedArr);
-		CommonMethods.printArr(unsortedArr);
+		ArrMethods.printArr(unsortedArr);
 	}
 
 	public static void sort(int[] arr) {
@@ -27,7 +27,7 @@ public class SelectionSort {
 				if (arr[minIndex] > arr[i])
 					minIndex = i;
 			}
-			CommonMethods.inArraySwap(arr, minIndex, j);
+			ArrMethods.swapInArr(arr, minIndex, j);
 		}
 
 	}
