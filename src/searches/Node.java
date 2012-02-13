@@ -24,8 +24,13 @@ public class Node {
 	public Node(int intData) {
 		this.intData = intData;
 	}
-	public Node(String strData){
+
+	public Node(String strData) {
 		this.strData = strData;
+	}
+
+	public Node() {
+
 	}
 
 }
