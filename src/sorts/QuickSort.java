@@ -14,13 +14,14 @@ public class QuickSort {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] sortedArr = new int[] { 1, 2, 3, 4, 5, 7, 8, 9, 0 };
-		int[] unsortedArr = new int[] { 3, 5, 1, 9, 4, 8, 6 };
-		sort(unsortedArr);
+		int[] sortedArr = new int[] { 1, 2, 3, 4, 5, 7, 8, 9, 10 };
+		int[] unsortedArr = new int[] { 3, 5, 1, 9, 4, 8, 6,10 };
+		
 		sort(sortedArr);
+		sort(unsortedArr);
 		// partition(unsortedArr, 0, unsortedArr.length-1);
-		ArrMethods.printArr(unsortedArr);
 		ArrMethods.printArr(sortedArr);
+		ArrMethods.printArr(unsortedArr);
 
 	}
 

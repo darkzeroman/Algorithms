@@ -6,16 +6,16 @@ public class InsertionSort {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// has extra char for place holder for value to be inserted
-		int[] sortedArr = new int[] { 1, 2, 3, 4, 5, 7, 8, 9, 0 };
 		int[] unsortedArr = new int[] { 3, 5, 1, 9, 4, 8, 6 };
+		// extra int for space for inserted value
+		int[] sortedArr = new int[] { 1, 2, 3, 4, 5, 7, 8, 9, 0 };
 
 		insertionSort(unsortedArr);
 		insert(sortedArr, 6);
-		
+
 		ArrMethods.printArr(unsortedArr);
 		ArrMethods.printArr(sortedArr);
-		
+
 	}
 
 	public static int[] insertionSort(int[] arr) {
@@ -38,6 +38,5 @@ public class InsertionSort {
 		arr[i + 1] = num;
 		// printArr(arr);
 	}
-
 
 }
