@@ -16,12 +16,12 @@ public class MergeSort2 {
 		// TODO Auto-generated method stub
 		int[] arr = new int[] { 3, 4, 2, 6, 7, 1 };
 		sort(arr);
-		CommonMethods.printArr(arr);
+		ArrMethods.printArr(arr);
 	}
 
 	public static void sort(int[] arr) {
 		int[] helper = new int[arr.length];
-		mergeSort(arr, helper, 0, arr.length - 1);
+		mergeSort(arr, helper, 0, arr.length);
 	}
 
 	public static int[] mergeSort(int[] arr, int[] helper, int left, int right) {
