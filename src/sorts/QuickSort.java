@@ -15,8 +15,8 @@ public class QuickSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] sortedArr = new int[] { 1, 2, 3, 4, 5, 7, 8, 9, 10 };
-		int[] unsortedArr = new int[] { 3, 5, 1, 9, 4, 8, 6,10 };
-		
+		int[] unsortedArr = new int[] { 3, 5, 1, 9, 4, 8, 6, 10 };
+
 		sort(sortedArr);
 		sort(unsortedArr);
 		// partition(unsortedArr, 0, unsortedArr.length-1);
@@ -29,7 +29,7 @@ public class QuickSort {
 		quickSort(arr, 0, arr.length - 1);
 	}
 
-	static void quickSort(int[] arr, int left, int right) {
+	private static void quickSort(int[] arr, int left, int right) {
 		if (left < right) {
 			int partition = partition(arr, left, right);
 			quickSort(arr, left, partition);
@@ -38,7 +38,7 @@ public class QuickSort {
 
 	}
 
-	static int partition(int[] arr, int left, int right) {
+	private static int partition(int[] arr, int left, int right) {
 
 		int pivot = left + random.nextInt(right - left);
 		ArrMethods.swapInArr(arr, pivot, right);

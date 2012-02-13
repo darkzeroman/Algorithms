@@ -29,7 +29,7 @@ public class InsertionSort {
 		insert(arr, arr.length - 1, num);
 	}
 
-	public static void insert(int[] arr, int position, int num) {
+	private static void insert(int[] arr, int position, int num) {
 		int i = position - 1;
 		while (i >= 0 && arr[i] > num) {
 			arr[i + 1] = arr[i];

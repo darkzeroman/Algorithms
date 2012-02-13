@@ -27,7 +27,7 @@ public class HeapSort {
 		}
 	}
 
-	public static void buildHeap(int[] arr) {
+	private static void buildHeap(int[] arr) {
 		for (int i = arr.length / 2 - 1; i >= 0; i--)
 			heapify(arr, i, arr.length);
 	}

@@ -36,7 +36,7 @@ public class BST {
 		System.out.println();
 	}
 
-	public static void printTreeHelper(Node root, Traverse order) {
+	private static void printTreeHelper(Node root, Traverse order) {
 		if (root == null) {
 			return;
 		}
