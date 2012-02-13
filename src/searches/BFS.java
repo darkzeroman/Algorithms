@@ -19,7 +19,7 @@ public class BFS {
 
 		Node root = BST.makeTree(new int[] { 10, 12, 8, 9, 7, 11, 13 });
 		printBFT(root);
-		System.out.println(treeHas(root, 10));
+		System.out.println(find(root, 10));
 
 	}
 
@@ -49,7 +49,7 @@ public class BFS {
 
 	}
 
-	public static boolean treeHas(Node root, int num) {
+	public static boolean find(Node root, int num) {
 		Node sentinel = new Node();
 		LinkedList<Node> queue = new LinkedList<Node>();// Queue to hold nodes
 		queue.add(sentinel);
