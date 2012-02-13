@@ -14,7 +14,7 @@ public class BinarySearch {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] sortedArr = new int[] { 1, 2, 3, 4, 5, 7, 8, 9, 10 };
+		int[] sortedArr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		recSearch(sortedArr, 8);
 		iterSearch(sortedArr, 8);
 	}
@@ -22,8 +22,8 @@ public class BinarySearch {
 	public static void recSearch(int[] arr, int num) {
 		int loc = recBinSearchIndex(arr, num, 0, arr.length - 1);
 		boolean found = recBinSearch(arr, num, 0, arr.length - 1);
-		System.out
-				.println("Recursive Search: Found?: " + found + " at: " + loc);
+		System.out.println("Recursive Search: Found?: " + found + " at index: "
+				+ loc);
 	}
 
 	public static void iterSearch(int[] arr, int num) {

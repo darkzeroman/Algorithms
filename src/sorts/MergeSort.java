@@ -16,51 +16,43 @@ public class MergeSort {
 		// TODO Auto-generated method stub
 		int[] arr = new int[] { 3, 4, 2, 6, 7, 1 };
 		sort(arr);
+		ArrMethods.printArr(arr);
 	}
 
 	public static void sort(int[] arr) {
-		mergeSort(arr, 0, arr.length - 1);
-
+		int[] helper = new int[arr.length];
+		mergeSort(arr, helper, 0, arr.length);
 	}
 
-	public static int[] mergeSort(int[] arr, int left, int right) {
-		if (right > left) {
-			int mid = left + (right - left) / 2;
-			mergeSort(arr, helper, left, mid);
-			mergeSort(arr, helper, )
-		}
+	public static int[] mergeSort(int[] arr, int[] helper, int left, int right) {
+		if (right - left <= 1)
+			return arr;
+		int mid = left + (right - left) / 2;
 
+		arr = mergeSort(arr, helper, left, mid);
+		arr = mergeSort(arr, helper, mid, right);
+		merge(arr, helper, left, right);
 		return arr;
 	}
 
-	private static int[] merge(int[] arr, int a, int b, int max) {
-		int[] ans = new int[2 * max];
-		int c = 0;
-		int med = a + max;
-		int high = b + max;
-		while (a < med && b < high) {
-			if (arr[a] < arr[b]) {
-				ans[c] = arr[a];
-				a++;
-				c++;
+	private static void merge(int[] arr, int[] aux, int l, int r) {
+		int mid = l + (r - l) / 2;
+		int a = l, b = mid, c = l;
+		for (int i = l; i < r; i++) {
+			aux[i] = arr[i];
+		}
+
+		while (a < mid && b < r) {
+			if (aux[a] < aux[b]) {
+				arr[c++] = aux[a++];
 			} else {
-				ans[c] = arr[b];
-				b++;
-				c++;
+				arr[c++] = aux[b++];
 			}
 		}
-		if (a == max)
-			for (int i = c; i < high; i++) {
-				ans[c] = arr[b];
-				b++;
-			}
-		else
-			for (int i = c; i < high; i++) {
-				ans[c] = arr[a];
-				a++;
-			}
-		System.arraycopy(ans, 0, arr, a, 2 * max);
-		return arr;
-	}
+		while (a < mid)
+			arr[c++] = aux[a++];
+		while (b < r)
+			arr[c++] = aux[b++];
 
+	}
 }
