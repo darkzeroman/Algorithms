@@ -10,7 +10,7 @@ public class InsertionSort {
 		// extra int for space for inserted value
 		int[] sortedArr = new int[] { 1, 2, 3, 4, 5, 7, 8, 9, 0 };
 
-		insertionSort(unsortedArr);
+		sort(unsortedArr);
 		insert(sortedArr, 6);
 
 		ArrMethods.printArr(unsortedArr);
@@ -18,7 +18,7 @@ public class InsertionSort {
 
 	}
 
-	public static int[] insertionSort(int[] arr) {
+	public static int[] sort(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			insert(arr, i, arr[i]);
 		}
