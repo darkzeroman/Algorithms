@@ -19,7 +19,7 @@ public class SelectionSort {
 		Array.printArr(unsortedArr);
 	}
 
-	public static void sort(int[] arr) {
+	public static int[] sort(int[] arr) {
 		int minIndex = 0;
 		for (int j = 0; j < arr.length; j++) {
 			minIndex = j;
@@ -29,6 +29,6 @@ public class SelectionSort {
 			}
 			Array.swapIndices(arr, minIndex, j);
 		}
-
+		return arr;
 	}
 }

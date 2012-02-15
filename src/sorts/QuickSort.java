@@ -25,8 +25,9 @@ public class QuickSort {
 
 	}
 
-	public static void sort(int[] arr) {
+	public static int[] sort(int[] arr) {
 		quickSort(arr, 0, arr.length - 1);
+		return arr;
 	}
 
 	private static void quickSort(int[] arr, int left, int right) {
@@ -39,7 +40,7 @@ public class QuickSort {
 	}
 
 	private static int partition(int[] arr, int left, int right) {
-		if (right-left< 0)
+		if (right - left < 0)
 			System.out.println("error?");
 		int pivot = left + random.nextInt(right - left);
 		Array.swapIndices(arr, pivot, right);

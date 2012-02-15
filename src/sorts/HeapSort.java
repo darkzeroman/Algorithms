@@ -14,17 +14,18 @@ public class HeapSort {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] unsortedArr = new int[]{5,3,16,2,10,14};
+		int[] unsortedArr = new int[] { 5, 3, 16, 2, 10, 14 };
 		sort(unsortedArr);
 		Array.printArr(unsortedArr);
 	}
 
-	public static void sort(int[] arr) {
+	public static int[] sort(int[] arr) {
 		buildHeap(arr);
 		for (int i = arr.length - 1; i > 0; i--) {
 			Array.swapIndices(arr, 0, i);
 			heapify(arr, 0, i);
 		}
+		return arr;
 	}
 
 	private static void buildHeap(int[] arr) {
