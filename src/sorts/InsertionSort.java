@@ -13,8 +13,8 @@ public class InsertionSort {
 		sort(unsortedArr);
 		insert(sortedArr, 6);
 
-		ArrMethods.printArr(unsortedArr);
-		ArrMethods.printArr(sortedArr);
+		Array.printArr(unsortedArr);
+		Array.printArr(sortedArr);
 
 	}
 

@@ -30,24 +30,22 @@ public class DFS {
 		while (!stack.isEmpty()) {
 			Node currNode = stack.pop();
 
-			System.out.println(currNode.intData);
-
 			if (currNode.right != null)
 				stack.push(currNode.right);
 			if (currNode.left != null)
 				stack.push(currNode.left);
+
+			System.out.print(currNode.intData + " ");
 
 		}
 	}
 
 	public static boolean find(Node root, int num) {
 		LinkedList<Node> stack = new LinkedList<Node>();
-
 		stack.push(root);
 
 		while (!stack.isEmpty()) {
 			Node currNode = stack.pop();
-
 			if (num == currNode.intData)
 				return true;
 			if (currNode.right != null)

@@ -16,11 +16,12 @@ public class CountingSort {
 		// TODO Auto-generated method stub
 		int[] unsortedArr = new int[] { 1, 2, 3, 4, 2, 3, 4, 1, 3 };
 		sort(unsortedArr, 5);
-		ArrMethods.printArr(unsortedArr);
+		Array.printArr(unsortedArr);
 	}
 
-	public static void sort(int[] arr, int range) {
+	public static int[] sort(int[] arr, int range) {
 		countingSort(arr, range);
+		return arr;
 	}
 
 	private static void countingSort(int[] arr, int range) {

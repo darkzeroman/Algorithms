@@ -16,13 +16,13 @@ public class HeapSort {
 		// TODO Auto-generated method stub
 		int[] unsortedArr = new int[]{5,3,16,2,10,14};
 		sort(unsortedArr);
-		ArrMethods.printArr(unsortedArr);
+		Array.printArr(unsortedArr);
 	}
 
 	public static void sort(int[] arr) {
 		buildHeap(arr);
 		for (int i = arr.length - 1; i > 0; i--) {
-			ArrMethods.swapInArr(arr, 0, i);
+			Array.swapIndices(arr, 0, i);
 			heapify(arr, 0, i);
 		}
 	}
@@ -43,7 +43,7 @@ public class HeapSort {
 		if (right < max && arr[right] > arr[largest])
 			largest = right;
 		if (largest != i) {
-			ArrMethods.swapInArr(arr, i, largest);
+			Array.swapIndices(arr, i, largest);
 			heapify(arr, largest, max);
 		}
 

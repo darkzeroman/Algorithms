@@ -13,7 +13,7 @@ public class LeastNumCoins {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int num = leastNumCoins(new int[] { 1, 2, 3, 5 }, 99);
+		int num = leastNumCoins(new int[] { 1, 2, 3, 5 }, 100);
 		System.out.println(num);
 	}
 
