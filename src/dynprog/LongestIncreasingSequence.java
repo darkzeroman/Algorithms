@@ -23,19 +23,17 @@ public class LongestIncreasingSequence {
 	public static int longestIncreasingSequence(int[] arr) {
 		int[] T = new int[arr.length];
 
-		for (int i = 1; i < arr.length; i++) {
+		for (int i = 1; i < arr.length; i++)
 			T[i] = Math.max(T[i - 1] + arr[i], arr[i]);
-		}
 
 		int max = Integer.MIN_VALUE;
 		for (int i : T)
 			if (i > max)
 				max = i;
-
 		return max;
 	}
 
-	// Longest Increasing Sequence, using only
+	// Longest Increasing Sequence, using only one variable
 	public static int LIS(int[] arr) {
 		int max = Integer.MIN_VALUE;
 		int sum = 0;
@@ -46,7 +44,6 @@ public class LongestIncreasingSequence {
 				sum = 0;
 			if (max < sum)
 				max = sum;
-
 		}
 		return max;
 

@@ -14,12 +14,13 @@ public class BillBoards {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		maximize(new int[] { 0, 1, 2, 8, 10 }, new int[] { 0, 10, 15, 50, 20 });
-		maximizeLinear(new int[] { 0, 1, 2, 8, 10 }, new int[] { 0, 10, 15, 50,
-				20 });
+		maxRevenue(new int[] { 0, 1, 2, 8, 10 },
+				new int[] { 0, 10, 15, 50, 20 });
+		maxRevenueLinear(new int[] { 0, 1, 2, 8, 10 }, new int[] { 0, 10, 15,
+				50, 20 });
 	}
 
-	public static void maximize(int[] x, int[] r) {
+	public static void maxRevenue(int[] x, int[] r) {
 		int[] T = new int[x.length];
 
 		for (int i = 1; i < x.length; i++) {
@@ -37,7 +38,7 @@ public class BillBoards {
 
 	}
 
-	public static void maximizeLinear(int[] x, int[] r) {
+	public static void maxRevenueLinear(int[] x, int[] r) {
 		int[] L = new int[x.length];
 		int[] T = new int[x.length];
 		int j = 0;
