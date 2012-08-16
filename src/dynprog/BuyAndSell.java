@@ -14,7 +14,7 @@ public class BuyAndSell {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int out[] = buyAndSell(new int[] { 3, 4, 5, 1, 2, 5, 7, 80, 100 }, 0, 8);
+		int out[] = buyAndSell(new int[] { 10, 7 }, 0, 2);
 		System.out.println("Buy: " + out[0] + ", Sell: " + out[1]
 				+ ", Profit: " + out[2]);
 

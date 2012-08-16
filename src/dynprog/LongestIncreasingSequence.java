@@ -46,7 +46,7 @@ public class LongestIncreasingSequence {
 				max = sum;
 		}
 		return max;
-
+		
 	}
 
 }
